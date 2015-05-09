@@ -30,4 +30,16 @@ def draw_square(drone):
 	time.sleep(5)
 	d.halt()
 
-draw_square(drony)
+def draw_circle(drone):
+	""" Draws a circle with a drone
+	"""
+	d = drone
+	d.takeoff()
+	for i in range(72):
+		d.move_forward()
+		d.turn_left()
+	d.land()
+	time.sleep(5)
+	d.halt()
+
+draw_circle(drony)
